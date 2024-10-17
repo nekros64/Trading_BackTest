@@ -1,4 +1,4 @@
-# %%
+
 import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
@@ -129,8 +129,9 @@ def create_chart(df, start_idx=4000, end_idx=5000):
     return fig
 
 def main():
-    # Chargement des données
-    df = pd.read_csv("EURUSD_Candlestick_1_Hour_BID_04.05.2003-15.04.2023.csv")
+
+    # Remplacez avec le chemin complet vers votre fichier
+    df = pd.read_csv("D:/Progame Python/Foramtion Python/Dev Backtest/EURUSD_Candlestick_1_Hour_BID_04.05.2003-15.04.2023.csv")
     df = df[df['volume'] != 0].reset_index(drop=True)
     df = df.head(5000)
     
